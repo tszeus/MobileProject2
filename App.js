@@ -26,6 +26,7 @@ export default function App() {
           activeTintColor: "tomato",
           inactiveTintColor: "gray",
           labelPosition: "below-icon",
+          headerShown: false,
         })}
       >
         <Tab.Screen name="Home" component={HomeTab} />

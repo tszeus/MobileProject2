@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 function HomeTab() {
   return (
     <NavigationContainer independent={true}>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen
           name="Home"
           options={{ headerShown: false }}
