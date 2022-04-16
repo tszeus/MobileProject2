@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { API_BASE_URL } from "@env";
 import { ActivityIndicator, View, Text } from "react-native";
-import { Tile } from "react-native-elements";
+import { Button, Tile } from "react-native-elements";
 
-function MovieScreen({ route }) {
+function MovieScreen({ navigation, route }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [data, setData] = useState({});
@@ -58,6 +58,14 @@ function MovieScreen({ route }) {
         <View style={{ flex: 1 }}>
           <Text>{plot}</Text>
         </View>
+      </View>
+      <View style={{ width: "90%", alignSelf: "center" }}>
+        <Button
+          title="Go Home"
+          onPress={() => {
+            navigation.navigate("Home");
+          }}
+        />
       </View>
     </View>
   );

@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { API_BASE_URL } from "@env";
 import { SafeAreaView } from "react-native";
 import { SearchBar } from "react-native-elements";
-import MovieList from "../components/movieList";
+import MovieList from "../components/MovieList";
 
 function SearchScreen({ navigation }) {
   const [searchValue, setSearchValue] = useState("");
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState(null);
-  const [data, setData] = React.useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [data, setData] = useState([]);
 
   const handlePress = ({ title, id }) =>
     navigation.navigate("Movie", {

@@ -1,8 +1,8 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeTab from "./navigation/home";
-import SearchTab from "./navigation/search";
+import HomeTab from "./navigation/HomeTab";
+import SearchTab from "./navigation/SearchTab";
 import { Ionicons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();

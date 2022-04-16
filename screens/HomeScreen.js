@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { API_BASE_URL } from "@env";
 import {
   SafeAreaView,
@@ -7,14 +7,14 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from "react-native";
-import MovieSection from "../components/movieSection";
+import MovieSection from "../components/MovieSection";
 import { ScrollView } from "react-native-gesture-handler";
-import Carousel from "../components/carousel";
+import Carousel from "../components/Carousel";
 
 function HomeScreen({ navigation }) {
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState(null);
-  const [data, setData] = React.useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [data, setData] = useState([]);
 
   const handlePress = ({ title, id }) =>
     navigation.navigate("Movie", {
